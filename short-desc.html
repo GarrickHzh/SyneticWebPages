@@ -6,10 +6,10 @@
         background-image: url('https://ebay.syneticusa.com/syneticusa/banner.png');
         background-size: cover;
         background-position: center;*/
-        padding: 1rem;
         position: relative;
-        background: linear-gradient(to right, white, #74ccff);
-        padding: 3px;
+        border-style: ridge;
+        border-width: 8px;
+        border-color: #c6edfd;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,27 +20,22 @@
     .banner-content {
         max-width: 600px;
         color: black;
-        padding: 2rem;
-    }
-
-    .banner-h1 {
-        font-size: 3em;
-        margin-bottom: 10px;
+        padding: 8px;
     }
 
     .banner-p {
-        font-size: 1.5em;
-        margin-bottom: 20px;
+        margin: 0px;
+        padding: 3px;
     }
 
     .coupon-button {
         background-color: transparent;
         border-style: inset;
-        color: #fd2478;
+        color: #000000;
         font-size: 24px;
         line-height: 12px;
         padding: 10px;
-        border: 5px inset #00b7ff;
+        border: 2px inset #00b7ff;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -52,7 +47,7 @@
 
     .coupon-button:hover {
         background-color: transparent;
-        border: 5px inset #00b7ff;
+        border: 3px inset #00b7ff;
         border-radius: 50px;
     }
 
@@ -63,6 +58,7 @@
     .copy-message {
         display: none;
         font-size: 12px;
+        margin-bottom: 3px;
     }
 
     .tooltip {
@@ -78,13 +74,7 @@
         transition: opacity 1s;
     }
 
-
-
     @media only screen and (max-width: 600px) {
-        .banner-h1 {
-            font-size: 2em;
-        }
-
         .banner-p {
             font-size: 1em;
         }
@@ -118,9 +108,8 @@
     <div class="promo-banner">
         <div class="banner-content">
             <!-- Sales Event Content -->
-            <h1>Sales Event</h1>
-            <p class="banner-p">[Item] is __ % OFF</p>
-            <p class="banner-p" style="font-size: small;">Event ends at [Date]</p>
+            <h1>$50 OFF</h1>
+            <p style="font-size: small;">enter coupon code at checkout</p>
             <button class="coupon-button" onclick="copyCoupon()">
                 <span id="tooltipMsg" class="copy-message">- Click-to-Copy-</span>
                 <!-- Set Coupon Code -->
