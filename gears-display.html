@@ -9,7 +9,65 @@
     section {
         height: 100vh;
         width: 100%;
-        overflow-x: hidden;
+        background-color: darkgray;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+
+    #detail {
+        background-color: #00FFBB;
+    }
+
+    #comparison {
+        background-color: antiquewhite;
+    }
+
+    #installation {
+        background-color: brown;
+    }
+
+    #review {
+        background-color: #6174dd;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    nav .navi {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav .navi ul {
+        list-style: none;
+    }
+
+    nav .navi ul li {
+        display: inline-block;
+    }
+
+    nav .navi ul li a {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    nav .navi ul li.active {
+        background-color: #96d3a5;
+        transition: 0.3 ease background-color;
+    }
+
+    nav .navi ul li.active a {
+        color: #ffffff;
     }
 
     .container {
@@ -173,8 +231,7 @@
         font-size: 13px;
     }
 
-    /*
-    .tooltip-1 .tooltip-content .content button{
+    .tooltip-1 .tooltip-content .content button {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
         font-weight: 400;
@@ -188,7 +245,7 @@
         margin-top: 20px;
         box-shadow: 0px 0px 20px #098b8d;
     }
-*/
+
     /* (2) */
     .tooltip-2 .pin {
         top: 46%;
@@ -226,8 +283,7 @@
         font-size: 15px;
     }
 
-    /*
-    .tooltip-2 .tooltip-content .content button{
+    .tooltip-2 .tooltip-content .content button {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
         font-weight: 400;
@@ -241,7 +297,7 @@
         margin-top: 20px;
         box-shadow: 0px 0px 20px #098b8d;
     }
-*/
+
     /* (3) */
     .tooltip-3 .pin {
         top: 51%;
@@ -279,8 +335,7 @@
         font-size: 13px;
     }
 
-    /*
-    .tooltip-3 .tooltip-content .content button{
+    .tooltip-3 .tooltip-content .content button {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
         font-weight: 400;
@@ -294,7 +349,7 @@
         margin-top: 20px;
         box-shadow: 0px 0px 10px #098b8d;
     }
-*/
+
     @keyframes pulse-effect {
         0% {
             transform: scale(1);
@@ -307,33 +362,38 @@
         }
     }
 
-    /*
+
     @media (max-width:768px) {
-        .tooltip-1 .tooltip-content{
+        .tooltip-1 .tooltip-content {
             flex-direction: column;
             max-width: 300px;
         }
+
         .tooltip-1 .tooltip-content .content,
-        .tooltip-1 .tooltip-content .img{
+        .tooltip-1 .tooltip-content .img {
             width: 100%;
         }
-        .tooltip-2 .tooltip-content{
+
+        .tooltip-2 .tooltip-content {
             flex-direction: column;
             max-width: 300px;
         }
+
         .tooltip-2 .tooltip-content .content,
-        .tooltip-2 .tooltip-content .img{
+        .tooltip-2 .tooltip-content .img {
             width: 100%;
         }
-        .tooltip-3 .tooltip-content{
+
+        .tooltip-3 .tooltip-content {
             flex-direction: column;
             max-width: 300px;
         }
+
         .tooltip-3 .tooltip-content .content,
-        .tooltip-3 .tooltip-content .img{
+        .tooltip-3 .tooltip-content .img {
             width: 99%;
         }
-    }*/
+    }
 </style>
 
 <body>
@@ -342,7 +402,8 @@
             <h1 style="color: #ffffff">Gears attachments</h1>
             <h1 style="color: #ffffff; font-size:medium;">on SyneTrac-Pro | SyneTrac-AR | SyneTrac-ER</h1>
             <div class="img-hotspot">
-                <img src="media/006A1109.JPG" style="width: 100%;" alt="Truck bed covers with gears">
+                <img src="https://ebay.syneticusa.com/syneticusa/truck-banner-1.jpg" style="width: 100%;"
+                    alt="Truck bed covers with gears">
                 <div class="all-tooltips">
                     <!-- Cargo Rack Tooltip (1) -->
                     <div class="tooltip tooltip-1">
@@ -400,58 +461,103 @@
             </div>
         </div>
     </div>
-</body>
+    <nav>
+        <div class="navi">
+            <ul>
+                <li class="detail"><a href="#detail">Details</a></li>
+                <li class="comparison"><a href="#comparison">Comparison</a></li>
+                <li class="installation"><a href="#installation">Installation</a></li>
+                <li class="review"><a href="#review">Reviews</a></li>
+            </ul>
+            <section id="detail">
+                <h1>Details</h1>
+            </section>
+            <section id="comparison">
+                <h1>Comparison</h1>
+            </section>
+            <section id="installation">
+                <h1>Installation</h1>
+            </section>
+            <section id="review">
+                <h1>Reviews</h1>
+            </section>
+        </div>
+    </nav>
 
-<script>
-    // selection
-    const tooltips = document.querySelectorAll('.all-tooltips .tooltip');
-    const fullDiv = document.querySelector('.container-bg');
-    const container = document.querySelector('.container');
-    let timeOutID;
 
-    window.addEventListener('DOMContentLoaded', contentPosition);
-    window.addEventListener('resize', contentPosition)
+    <script>
+        // selection
+        const tooltips = document.querySelectorAll('.all-tooltips .tooltip');
+        const fullDiv = document.querySelector('.container-bg');
+        const container = document.querySelector('.container');
+        let timeOutID;
 
-    function contentPosition() {
+        window.addEventListener('DOMContentLoaded', contentPosition);
+        window.addEventListener('resize', contentPosition)
+
+        function contentPosition() {
+            tooltips.forEach(tooltip => {
+                const pin = tooltip.querySelector('.pin');
+                const content = tooltip.querySelector('.tooltip-content');
+                const arrow = tooltip.querySelector('.arrow');
+
+                if (pin.offsetLeft + content.offsetWidth / 2 > fullDiv.offsetWidth) {
+                    const extraLeft = fullDiv.offsetWidth - (pin.offsetLeft + content.offsetWidth / 2);
+                    content.style.left = pin.offsetLeft - content.offsetWidth / 2 + extraLeft - 30 + 'px';
+                } else if (pin.offsetLeft + container.offsetLeft < content.offsetWidth / 2) {
+                    content.style.left = -container.offsetLeft + 'px'
+                } else {
+                    content.style.left = pin.offsetLeft - content.offsetWidth / 2 + 'px';
+                }
+
+                content.style.top = pin.offsetTop + 30 + 'px';
+                arrow.style.left = pin.offsetLeft - content.offsetLeft + pin.offsetWidth / 2 + 'px';
+            })
+        }
+
         tooltips.forEach(tooltip => {
             const pin = tooltip.querySelector('.pin');
             const content = tooltip.querySelector('.tooltip-content');
-            const arrow = tooltip.querySelector('.arrow');
+            pin.addEventListener('mousemove', () => {
+                tooltip.classList.add('active');
+            })
+            pin.addEventListener('mouseleave', () => {
+                timeOutID = setTimeout(() => {
+                    tooltip.classList.remove('active')
+                }, 1000)
+            })
+            content.addEventListener('mousemove', () => {
+                clearTimeout(timeOutID)
+                tooltip.classList.add('active');
+            })
+            content.addEventListener('mouseleave', () => {
+                timeOutID = setTimeout(() => {
+                    tooltip.classList.remove('active')
+                }, 1000)
+            })
+        })
 
-            if (pin.offsetLeft + content.offsetWidth / 2 > fullDiv.offsetWidth) {
-                const extraLeft = fullDiv.offsetWidth - (pin.offsetLeft + content.offsetWidth / 2);
-                content.style.left = pin.offsetLeft - content.offsetWidth / 2 + extraLeft - 30 + 'px';
-            } else if (pin.offsetLeft + container.offsetLeft < content.offsetWidth / 2) {
-                content.style.left = -container.offsetLeft + 'px'
-            } else {
-                content.style.left = pin.offsetLeft - content.offsetWidth / 2 + 'px';
-            }
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('nav .navi ul li');
 
-            content.style.top = pin.offsetTop + 30 + 'px';
-            arrow.style.left = pin.offsetLeft - content.offsetLeft + pin.offsetWidth / 2 + 'px';
-        })
-    }
+        window.addEventListener('scroll', ()=>{
+            let current = "";
 
-    tooltips.forEach(tooltip => {
-        const pin = tooltip.querySelector('.pin');
-        const content = tooltip.querySelector('.tooltip-content');
-        pin.addEventListener('mousemove', () => {
-            tooltip.classList.add('active');
-        })
-        pin.addEventListener('mouseleave', () => {
-            timeOutID = setTimeout(() => {
-                tooltip.classList.remove('active')
-            }, 1000)
-        })
-        content.addEventListener('mousemove', () => {
-            clearTimeout(timeOutID)
-            tooltip.classList.add('active');
-        })
-        content.addEventListener('mouseleave', () => {
-            timeOutID = setTimeout(() => {
-                tooltip.classList.remove('active')
-            }, 1000)
-        })
-    })
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop; //grab position of the top of the section
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - sectionHeight / 3)){
+                    current = section.getAttribute('id');
+                }
+            })
 
-</script>
+            navLi.forEach(li => {
+                li.classList.remove('active')
+                if(li.classList.contains(current)){
+                    li.classList.add('active')
+                }
+            })
+        })
+
+    </script>
+</body>
