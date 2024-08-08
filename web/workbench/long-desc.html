@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 80vh;
+            width: 100%;
+            background-color: darkgray;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+        }
+
+        #detail {
+            background-color: #00FFBB;
+        }
+
+        #comparison {
+            background-color: antiquewhite;
+        }
+
+        #installation {
+            background-color: brown;
+        }
+
+        #review {
+            background-color: #6174dd;
+        }
+
+        .navbar {
+            /*position: fixed;*/
+            border-style: dotted;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+        }
+
+        nav .navi {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+            z-index: 999;
+        }
+
+        nav .navi ul {
+            list-style: none;
+        }
+
+        nav .navi ul li {
+            display: inline-block;
+        }
+
+        nav .navi ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        nav .navi ul li.active {
+            background-color: #96d3a5;
+            transition: 0.3 ease background-color;
+        }
+
+        nav .navi ul li.active a {
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container>h1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container-bg {
+            position: relative;
+            text-align: center;
+            padding: 14px;
+        }
+
+        .container-bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background-color: #0CE4E8;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="navi">
+                    <ul>
+                        <li class="detail"><a href="#detail">Details</a></li>
+                        <li class="comparison"><a href="#comparison">Comparison</a></li>
+                        <li class="installation"><a href="#installation">Installation</a></li>
+                        <li class="review"><a href="#review">Reviews</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="detail">
+        <h1>Details</h1>
+    </section>
+    <section id="comparison">
+        <h1>Comparison</h1>
+    </section>
+    <section id="installation">
+        <h1>Installation</h1>
+    </section>
+    <section id="review">
+        <h1>Reviews</h1>
+    </section>
+
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('nav .navi ul li');
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop; //grab position of the top of the section
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            })
+
+            console.log(current);
+
+            navLi.forEach(li => {
+                li.classList.remove('active')
+                //console.log(current);
+                if (li.classList.contains(current)) {
+                    li.classList.add('active')
+                }
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

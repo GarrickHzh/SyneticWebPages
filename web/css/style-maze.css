@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    font-family: 'Alkatra', cursive;
+}
+
+#view{
+    margin-top: 30px;
+}
+
+#mazeContainer{
+    top: 15px;
+    opacity: 0;
+    display: inline-block;
+    margin:  auto;
+    border-radius: 10px;
+}
+
+#mazeContainer #mazeCanvas{
+    margin: 0;
+    display: block;
+    border: solid 2px black;
+    height: 400px;
+}
+
+input,select{
+    cursor: pointer;
+    background-color: rbga(0, 0, 0, 0.30);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    appearance: none;
+}
+
+input:hover, select:hover{
+    background-color: rbga(0, 0, 0, 0.70);
+}
+
+input:active, select:active{
+    background-color: black;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+.custom-select{
+    display: inline-block;
+}
+
+.custom-select select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    background-repeat: no-repeat;
+    background-position: 125px;
+}
+
+#Message-Container{
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rbga(0, 0, 0, 0.30);
+}
+
+#Message-Container #message{
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+#page{
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+#page #menu{
+    padding: 10px;
+    height: 65px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#page #menu h1{
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+
+#page #view{
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+}
+
+.border{
+    border: 10px black solid;
+    border-radius: 10px;
+}
+
+#instructions{
+    margin-top: 425px;
+}
+
+@media only screen and (max-width: 400px) {
+    input, select{
+        width: 120px;
+    }
+}
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devic-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <title>Maze | Mini Game</title>
+
+</head>
+<style>
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #b0cee2;
+        font-family: 'Alkatra', cursive;
+    }
+
+    #view {
+        margin-top: 30px;
+    }
+
+    #mazeContainer {
+        top: 15px;
+        opacity: 0;
+        display: inline-block;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    #mazeContainer #mazeCanvas {
+        margin: 0;
+        display: block;
+        border: solid 10px #AFB4F0;
+        border-style: double;
+        height: 470px;
+    }
+
+    input,
+    select {
+        cursor: pointer;
+        background-color: #AFF0E7;
+        height: 45px;
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        font-size: 15px;
+        text-align: center;
+        appearance: none;
+        font-family: 'Alkatra', cursive;
+    }
+
+    input:hover,
+    select:hover {
+        background-color: rgba(0, 0, 0, 0.70);
+    }
+
+    input:active,
+    select:active {
+        background-color: black;
+    }
+
+    input:focus,
+    select:focus {
+        outline: none;
+    }
+
+    .custom-select {
+        display: inline-block;
+    }
+
+    .custom-select select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-repeat: no-repeat;
+        background-position: 125px;
+    }
+
+    #Message-Container {
+        visibility: hidden;
+        color: white;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.30);
+    }
+
+    #Message-Container #message {
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -150px;
+    }
+
+    #page {
+        text-align: center;
+        height: auto;
+        width: auto;
+        margin: auto;
+        position: relative;
+        font-family: 'Alkatra', cursive;
+    }
+
+    #page #menu {
+        padding: 10px;
+        height: 65px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    #page #menu h1 {
+        margin: auto;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 3.2rem;
+        
+    }
+
+    #page #view {
+        position: absolute;
+        top: 65px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .border {
+        border: 10px black solid;
+        border-radius: 10px;
+    }
+
+    #instructions {
+        margin-top: 550px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        input,
+        select {
+            width: 120px;
+        }
+    }
+</style>
+
+</html>
+
+<body>
+    <div id="page">
+        <!-- Finished Screen -->
+        <div id="Message-Container">
+            <div id="message">
+                <h1>Congratulations!</h1>
+                <p>You are finished.</p>
+                <p id="moves"></p>
+                <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!" />
+            </div>
+        </div>
+
+        <!-- Difficulty Menu -->
+        <br>
+        <div id="menu">
+            <div class="custom-select">
+                <select id="diffSelect">
+                    <option value="10">Easy</option>
+                    <option value="15">Medium</option>
+                    <option value="25">Hard</option>
+                    <option value="38">Extreme</option>
+                </select>
+            </div>
+            <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+        </div>
+
+        <!-- Maze Block-->
+        <div id="view">
+            <div id="mazeContainer">
+                <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+            </div>
+        </div>
+
+        <p id="instructions">Use arrow keys to move the key to the house!</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>

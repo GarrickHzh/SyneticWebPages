@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .heading-title {
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .info-column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+
+        }
+
+        .info {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        img {
+            padding: 30px 0;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        hr.dotted {
+            border: none;
+            border-top: 5px dotted #009cf7;
+            width: 80%;
+        }
+
+        .info-btn {
+            font-family: Lato;
+            font-weight: 100;
+            font-size: 14px;
+            color: #fff;
+            background-color: #009cf7;
+            padding: 10px 30px;
+            border: none;
+            box-shadow: rgb(121, 201, 201) 3px 3px 0px 0px;
+            border-radius: 50px;
+            transition: 1000ms;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .info-btn:hover {
+            transition: 1000ms;
+            padding: 10px 50px;
+            transform: translateY(-0px);
+            background-color: #fff;
+            color: #009cf7;
+            border: none;
+        }
+
+        @media (max-width: 799px) {
+            .info-column {
+                width: 100% !important;
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
+                -webkit-column-width: 200px;
+                -moz-column-width: 200px;
+                column-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .info-column {
+                width: 100% !important;
+                column-count: 1;
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading-title">
+            <!-- Title -->
+            <h1 style="color: #009cf7"><strong>About SyneticUSA</strong></h1>
+            <!-- Sub-Title -->
+            <p style="margin-bottom: 24px">Whether it’s a vacation trip to the beach with the family or a hunting trip
+                across the country with the buddies, you can feel conﬁdent with our tonneau cover.</p>
+            <button class="info-btn" ><a href="https://www.syneticusa.com/index.php/">Shop Now</a></button>
+        </div>
+        <!-- Content -->
+        <div class="row">
+
+            <div class="info-column">
+                <div class="info">
+                    <h2><strong>Our Retractable Tonneau Covers</strong></h2>
+                    <p style="font-size: large">Our covers are designed to protect the contents of the truck bed from weather, dust, and other
+                        elements, while also providing a sleek and streamlined appearance. The cover is made from
+                        durable, weather-resistant materials and is designed to provide a perfect fit for the truck bed.
+                    </p>
+                    <button class="info-btn"><a href="https://www.syneticusa.com/index.php/tonneau-cover/tonneau-cover-rack-combo.html">Shop Tonneau Cover</a></button>
+                </div>
+            </div>
+            <div class="info-column">
+                <img class="w-full lg:w-1/2 md:p-3 responsive"
+                    src="https://ebay.syneticusa.com/syneticusa/aitruck-info.png"
+                    alt="fan made image of Rebel and Raptor">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="info-column">
+                <img class="w-full lg:w-1/2 md:p-3 responsive"
+                    src="https://ebay.syneticusa.com/syneticusa/ailed-info.png" alt="image of Syneticusa's LED product">
+
+            </div>
+            <div class="info-column">
+                <div class="info">
+                    <h2><strong>SyneticUSA LED Lighting</strong></h3>
+                        <p style="font-size: large">We also design and manufacture superior automotive aftermarket performance lighting. As a way to truly and uniquely identify ourselves from other brands in the market, you will find various multi-function LED light bulbs when shopping at SyneticUSA. We sell more than just quality, affordable parts, we also sell confidence.
+                        </p>
+                        <button class="info-btn"><a href="https://www.syneticusa.com/index.php/tonneau-cover/tonneau-cover-rack-combo.html">Shop LED Products</a></button>
+                </div>
+            </div>
+            <div style="display: block; clear: both; height: 50px;"></div>
+        </div>
+        <div style="display: block; clear: both; height: 50px;"></div>
+        <hr class="dotted">
+        <div class="container">
+            <p style="font-size: large">We are excited to share with you the latest developments and updates about what we offer! Our store has launched new product lines, one of which includes a huge variety of retractable tonneau covers for both pickup and shipping. As always, we are committed to provide our customers with the best products and service possible. Thank you for your continued support and we look forward to hearing from you soon!</p>
+
+            <p style="font-size: large">All purchases in our store have a minimum 30-Day Money-Back Guarantee, please see our <a
+                    href="https://www.syneticusa.com/index.php/return_refund">Returns policy</a>.</p>
+        </div>
+
+    </div>
+</body>

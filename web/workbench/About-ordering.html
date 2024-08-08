@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        /* Set up flex container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            margin: 15px;
+            row-gap: 10px;
+        }
+
+        /* Set up flex items */
+        .about-item {
+            flex: 1 0 100%;
+            padding: 10px;
+            margin: 15px;
+            box-sizing: border-box;
+            float: right;
+            border-radius: 20px;
+            padding-top: 10px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.23);
+        }
+
+        .about-item:hover {
+            box-shadow: 0 14px 2px rgb(10, 189, 196, 0.16), 0 3px 6px rgba(19, 240, 248, 0.23);
+            transform: translate(0px, -8px);
+        }
+
+        /* Set up media queries for responsive design */
+        @media screen and (min-width: 768px) {
+
+            /* Set up 2 columns for larger screens */
+            .about-item {
+                flex: 1 0 35%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="about-item">
+            <h2>About My Order</h2>
+            <p><strong>How do I check the status of my order? What is an order number? How do I track my order using
+                    this number?</strong></p>
+            <p>An order number is used to reference your order by our ordering system. After placing an order, you
+                will be given a username and password, which you can use to check your purchase online using your
+                order number. To track your order number, click on My Account and review your order details.</p>
+            <p>​If you’ve lost your order number and want to retrieve it, please Email us at info@syneticusa.com and
+                provide us with your order date and the full name you used in the billing section (not ship to
+                section) of the checkout page when you made your purchase.</p>
+        </div>
+        <div class="about-item">
+            <h2>​Cancellation Policy</h2>
+            <p>Only orders that have not been confirmed for payment can be cancelled. Cancelling an order should be done
+                before receipt of the Invoice-Payment voucher (sent via email).</p>
+        </div>
+    </div>
+    </div>
+
+    <!-- Second row with 1 column -->
+    <div class="container">
+        <div class="about-item">
+            <h2>Payment and Billing</h2>
+            <p><strong>What methods of payment do you accept?</strong></p>
+            <p>The fastest methods to process your order include all major Credit Cards: Visa,
+                MasterCard, American Express and Discovery or through Paypal, and Google Checkout.</p>
+            <br>
+            <p><strong>During the checkout process, I noticed "phone number" was a required field. Why
+                    do you need my phone number?</strong></p>
+            <p>We collect your phone number as well as other contact details so we can inform you if
+                there is a problem with your account or purchase. We may also contact you in case we need to verify or
+                get clarification on the information you provided us. We may engage with other companies for certain
+                transactions, but we will not share your contact details or other personally identifiable information
+                unless necessary and with your permission.</p>
+            <br>
+            <p><strong>How do you compute the sales tax on my order/invoice? </strong></p>
+            <p>We must collect sales tax for orders shipped within California. By law, sales tax is
+                automatically computed on products.</p>
+        </div>
+        <div style="display: block; clear: both; height: 50px;"></div>
+    </div>
+</body>

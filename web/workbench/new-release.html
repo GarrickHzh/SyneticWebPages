@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+/*        * {
+            box-sizing: border-box;
+
+        }
+*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .f-column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            image-orientation: center;
+            margin: auto;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .myButton {
+            box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            background: linear-gradient(to bottom, #bddbfa 5%, #40b5ff 100%);
+            background-color: #bddbfa;
+            border-radius: 6px;
+            border: 1px solid #84bbf3;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 8px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #528ecc;
+        }
+
+        .img {
+            width: 20%;
+            height: 20%;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+
+        body,
+        html {
+            height: 100%;
+
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .bg {
+            /* The image used */
+            background-image: url("https://picsum.photos/id/114/300/300");
+            /* Full height */
+            height: 30%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .myButton:hover {
+            background: linear-gradient(to bottom, #40b5ff 5%, #bddbfa 100%);
+            background-color: #80b5ea;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .card-bg {
+            background-color: #6e7174;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 960px;
+            width: calc(100% - 10px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            cursor: pointer;
+            height: 260px;
+            width: 300px;
+            position: relative;
+        }
+
+        .card::before {
+            background: radial-gradient(
+                800px circle at var(--mouse-x) var(--mouse-x),
+                rgba(255, 255, 255, 0.06),
+                transparent 45%);
+            border-radius: inherit;
+            content: "";
+            top: 0px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .f-column {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+                -webkit-column-width: 200px;
+                -moz-column-width: 200px;
+                column-width: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .f-column {
+                column-count: 1;
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header-->
+    <section class="py-5" style="box-sizing: border-box">
+        <div class="row justify-content-center">
+            <div class="f-column">
+                <h1 class="fw-bolder mb-3">Pick'Em GO: [SyneTrac-Pro]</h1>
+                <p class="text-center w-full lg:w-1/2 md:p-3">Finding the right product for your truck has never been
+                    easier with <strong style="color: lightskyblue;">Pick'em Go</strong>. Start set up your whip with
+                    tonneau cover and rack system now.</p>
+                <div><a href="https://www.syneticusa.com/index.php/synetrac-pro-all.html"><button class="myButton">
+                            Cuztomize Now</button></a><button class="myButton">Learn
+                        More</button></a></div>
+                <p></p>
+            </div>
+            <div class="f-column"><img class="w-full lg:w-1/2 md:p-3 responsive"
+                    src="https://picsum.photos/id/237/600/300" style="width: 100%;"
+                    alt="image of shipping department-1">
+            </div>
+        </div>
+    </section>
+    <!-- Section ONE-->
+    <section class="container py-5 bg-light"  style="box-sizing: border-box">
+        <div class="row justify-content-center">
+            <div>
+                <h1 class="fw-bolder mb-3">Same Day Shipping</h1>
+                <p class=" ext-center w-full lg:w-1/2 md:p-5">All orders usually ship from our warehouse within 24 hours
+                    after processing the order. Ground shipping takes 2 to 7 business days via UPS or USPS. For bulk
+                    parts, it can take 10 to 14 business days. <br><br>**Please note that weekends and holidays are not
+                    considered business days.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Section TWO-->
+    <section class="container py-5 bg-light" style="box-sizing: border-box">
+        <div class="row justify-content-center">
+            <div class="bg">
+                <h1 class="fw-bolder mb-3">Ship on Time</h1>
+                <p>image content. (image as background)</p>
+            </div>
+        </div>
+    </section>
+    <!-- Section THREE-->
+    <section class="py-5" style="box-sizing: border-box">
+        <div class="row">
+            <div class="f-column"><img class="w-full lg:w-1/2 md:p-3 responsive"
+                    src="https://picsum.photos/seed/picsum/300/200" style="border-radius: 50%;"
+                    alt="image of shipping department-2"></div>
+            <div class="f-column" id="down">
+                <h1 class="fw-bolder mb-3">How to use <strong><span style="color: lightskyblue;">Pick'Em
+                            GO</span></strong></h1>
+                <ol>
+                    <li><strong>Choose your Vehicle</strong><br>First hoose your vehicle's year, model, and make.</li>
+                    <li><strong>Select Product / Rack System</strong><br>
+                        <div>
+                            <div><span>Next, there are four options: cover only, crossbar, ladder rack, cargo rack,
+                                    utility rack. As the listing labaled, "Cover Only" option is for tonneau cover only.
+                                    Others will be a bundle. (Tonneau & Rack system)</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div><span><span><strong>Add to Cart</strong><br></span></span>
+                                <div>
+                                    <div><span>Lastly, place your order as usual after adding the item to your cart.
+                                            Products </span><span>will be available to ship shortly!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <div style="display: block; clear: both; height: 100px;"></div>
+    <!-- Section FOUR -->
+    <section class="py-5 card-bg">
+        <div id="cards">
+            <div class="card">
+            </div>
+            <div class="card">
+            </div>
+            <div class="card">
+            </div>
+            <div class="card">
+            </div>
+            <div class="card">
+            </div>
+            <div class="card">
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const handleOnMouseMove = e =>{
+        const {currentTarget: target} = e
+
+        const rect = tartget.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.topl
+        target.style.setProperty("--mouse-x", '${x}px');
+        target.style.setProperty("--mouse-y", '${y}px');
+        
+    }
+
+    for(const card of document.querySelectorAll(".card")){
+        card.onmousemove = e => handleOnMouseMove(e);
+    }
+</script>

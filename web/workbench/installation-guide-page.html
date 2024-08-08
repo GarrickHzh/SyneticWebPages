@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+            align-items: center;
+        }
+
+        /* Style the tab */
+        .tab {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            flex: 1;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            text-align: center;
+            border: none;
+            margin: 2px 2px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ffffff;
+            border-bottom: 2mm ridge #1ec5f0;
+        }
+
+        /* Change background color of tabs to light blue on active state */
+        .tab button.active {
+            background-color: #ffffff;
+            border-bottom: 2mm ridge #1ec5f0;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: none;
+        }
+
+        .tabcontent.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The tab table -->
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Tab1')"><strong>SyneTrac-MR</strong></button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')"><strong>SyneTrac-PRO</strong></button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')"><strong>SyneTrac-AR</strong></button>
+        <button class="tablinks" onclick="openTab(event, 'Tab4')"><strong>SyneTrac-ER</strong></button>
+        <button class="tablinks" onclick="openTab(event, 'Tab5')"><strong>Rack System</strong></button>
+    </div>
+
+    <div id="Tab1" class="tabcontent active">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-251104ed-ec4b-4779-8b46-dbd1d02a2a12"></div>
+    </div>
+
+    <div id="Tab2" class="tabcontent">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-df80ca25-7bf0-44ad-9f49-2b643b82c707"></div>
+    </div>
+
+    <div id="Tab3" class="tabcontent">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-4e8116a3-8c33-4594-bdcf-fac44d25776a"></div>
+    </div>
+
+    <div id="Tab4" class="tabcontent">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-ef0a35aa-4457-4c62-94df-52ddd1545ad8"></div>
+    </div>
+
+    <div id="Tab5" class="tabcontent">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-d0a05506-04e0-4a8a-8925-fb2e1be07967"></div>
+    </div>
+</body>
+
+<script>
+    function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>

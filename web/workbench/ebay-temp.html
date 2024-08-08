@@ -1,0 +1,450 @@
+<font rwr="1" size="4" style="font-family:Arial">
+  <font rwr="1" size="4" style="font-family:Arial">
+    <font rwr="1" style="font-family: Arial;">
+      <style>
+        * {
+          margin: 0 auto;
+          padding: 0;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          font-family: 'Roboto', sans-serif;
+        }
+
+        html *,
+        html *:before,
+        html *:after {
+          box-sizing: inherit;
+        }
+
+        body {
+          width: 100%;
+          height: 450px;
+          box-sizing: border-box;
+          font-size: 16px;
+          font-family: 'Roboto', sans-serif;
+          color: #444;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-touch-callout: none !important;
+        }
+
+        a {
+          -webkit-user-select: none !important;
+        }
+
+        #synetic-footer,
+        #synetic-content {
+          max-width: 800px;
+          width: 100%
+        }
+
+        #synetic-footer #tabs {
+          margin: 10px 0px 0px 0px;
+          display: block;
+          width: 100%;
+          max-width: 800px
+        }
+
+        #synetic-footer #tabs [type=radio] {
+          display: none;
+        }
+
+        #synetic-footer #tabs label li {
+          font-size: 16px;
+          font-family: 'Roboto', sans-serif;
+          border-bottom: 2px solid #fff;
+          display: inline-block;
+          cursor: pointer;
+          width: 23%;
+          text-align: center;
+          vertical-align: top;
+          padding: 8px 0px;
+          margin-right: 1px;
+          transition: all 0.5s;
+          font-weight: bold;
+          height: 40px;
+        }
+
+        #synetic-footer #tabs label li a {
+          color: #333;
+          text-decoration: none;
+        }
+
+        #synetic-footer #tabs [type=radio]:checked+label li,
+        div#tabs label li:hover {
+          border-bottom: 2px solid #1ec5f0;
+          color: #1EC5F0;
+        }
+
+        #synetic-footer #tabs [type=radio]:checked+label li a,
+        div#tabs label li:hover a {
+          color: #0285D0;
+        }
+
+        #synetic-footer #tabs #tab-1:checked~.content1,
+        div#tabs #tab-2:checked~.content2,
+        div#tabs #tab-3:checked~.content3,
+        div#tabs #tab-4:checked~.content4,
+        div#tabs #tab-5:checked~.content5 {
+          display: block;
+        }
+
+        #synetic-footer #tabs #tab-1:checked~.content1 .tabcontent,
+        div#tabs #tab-2:checked~.content2 .tabcontent,
+        div#tabs #tab-3:checked~.content3 .tabcontent,
+        div#tabs #tab-4:checked~.content4 .tabcontent,
+        div#tabs #tab-5:checked~.content5 .tabcontent,
+        div#tabs #tab-1:checked~.content1 h4,
+        div#tabs #tab-2:checked~.content2 h4,
+        div#tabs #tab-3:checked~.content3 h4,
+        div#tabs #tab-4:checked~.content4 h4,
+        div#tabs #tab-5:checked~.content5 h4 {
+          animation: fadeIn .5s;
+        }
+
+        #synetic-footer #tabs .content {
+          display: none
+        }
+
+        #synetic-footer #tabs .content h4.tabtitle {
+          display: none;
+        }
+
+        #synetic-footer #tabs .content .tabcontent {
+          padding: 20px 40px;
+          margin: 0px;
+          font-size: 14px;
+          display: block;
+          font-family: 'Roboto', sans-serif;
+          line-height: 22px;
+        }
+
+        #synetic-footer #tabs .content .tabcontent p {
+          margin: 0 0 10px 0;
+        }
+
+        #synetic-footer #tabs label li a {
+          display: block;
+          pointer-events: none;
+        }
+
+        #synetic-content .description {
+          padding: 30px 3px 30px 50px
+        }
+
+        #synetic-content .synetic-title {
+          position: relative;
+          display: block
+        }
+
+        #synetic-content .synetic-title .synetic-label:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 30px;
+          height: 30px;
+          transform: rotate(45deg);
+          border: 3px solid #F101A8;
+          top: -4px;
+          left: -10px;
+          z-index: 0;
+        }
+
+        #synetic-content .synetic-title .synetic-text {
+          background: #fff;
+          position: relative;
+          text-transform: uppercase;
+          padding-left: 5px;
+          font-weight: 700;
+          z-index: 1
+        }
+
+        #synetic-content .synetic-content {
+          margin: 20px;
+        }
+
+        #synetic-content .synetic-content ul {}
+
+        #synetic-content .synetic-content ul li {
+          line-height: 25px;
+          list-style: none;
+          font-size: 15px;
+          position: relative;
+        }
+
+        #synetic-content .synetic-content ul li:before {
+          content: '';
+          content: '';
+          position: absolute;
+          display: block;
+          width: 5px;
+          height: 5px;
+          transform: rotate(45deg);
+          background: #000;
+          top: 10px;
+          left: -20px;
+          z-index: 1;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @media screen and (max-width: 700px) {
+          .synetic img {
+            width: 100%;
+            height: auto
+          }
+
+          #synetic-footer #tabs label li {
+            font-size: 12px
+          }
+        }
+      </style>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+      <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+      <div id="synetic-content" style="">
+        <div class="synetic synetic-image-1" style="font-size: 14pt;"><img
+            src="https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/728AAOSwkMhfF3zz/$_57.PNG?set_id=8800005007" height="800px">
+        </div>
+        <div class="synetic synetic-image-2" style="font-size: 14pt;"><br></div>
+        <div class="description" style="">
+          <div class="synetic-title" style="font-size: 14pt;"><span class="synetic-label"></span>
+            <p class="synetic-text">About this item</p>
+          </div>
+          <div class="synetic-content" style="">
+            <ul style="">
+              <li><strong style="font-size: small; text-align: center;"><em>
+                    <font class="Apple-style-span">Condition:&nbsp; Brand New</font>
+                  </em></strong></li>
+              <li><strong style="font-size: small; text-align: center;"><em>
+                    <font class="Apple-style-span">Package Content:&nbsp; 2x 3157 LED bulbs</font>
+                  </em></strong></li>
+              <li><em style="font-size: small; text-align: center;"><strong>Color:&nbsp;&nbsp;</strong></em><span
+                  class="style2"
+                  style="font-size: small; text-align: center; color: rgb(255, 0, 0);"><strong><em>Red</em></strong></span>
+              </li>
+              <li><em style="text-align: center;"><strong>
+                    <font size="2">LED Chip: 3535 (15 Chips)</font>
+                  </strong></em></li>
+              <li><em style="text-align: center;"><strong>
+                    <font size="2">Application: Brake Lights (Strobe)</font>
+                  </strong></em></li>
+              <li><em style="text-align: center;"><strong>
+                    <font size="2">Flashes 8 times for brake light mode and then stay solid</font>
+                  </strong></em></li>
+              <li><em style="text-align: center;"><strong>
+                    <font size="2">Warranty: 1 Year</font>
+                  </strong></em></li>
+            </ul>
+          </div>
+        </div>
+        <div class="synetic synetic-image-3" style="font-size: 14pt;"><br></div>
+      </div>
+      <!-- BEGIN VIDEO -->
+      <div class="ft_vid">
+        <a target="youtube" href="https://www.youtube.com/watch?v=O_3Lze7qGOY">
+          <img src="https://i.ytimg.com/vi/O_3Lze7qGOY/hqdefault.jpg">
+        </a>
+        <p class="ft_vid_head">Safety Flash Alert Tail Bulbs in Action</p>
+        <p class="ft_vid_foot">Video will open in a new window</p>
+      </div>
+      <div class="ft_lnk_div">Using the mobile app? Copy this link into your browser:<br>
+        <input class="ft_lnk" type="text" value="https://www.youtube.com/watch?v=O_3Lze7qGOY">
+      </div>
+      <style>
+        .ft_vid {
+          margin: .5em auto 0 auto;
+          max-width: 480px;
+          font-family: arial;
+          text-align: center;
+          position: relative;
+          min-height: 120px;
+          overflow: hidden;
+          background-color: #555;
+        }
+
+        .ft_vid p {
+          position: absolute;
+          margin: 0;
+          color: white;
+          background-color: rgba(0, 0, 0, .5);
+        }
+
+        .ft_vid .ft_vid_head {
+          font-size: 16px;
+          width: 100%;
+          height: 28px;
+          line-height: 28px;
+          text-align: left;
+          top: 0;
+          left: 0;
+          padding-left: 10px;
+          overflow: hidden;
+        }
+
+        .ft_vid .ft_vid_foot {
+          font-size: 11px;
+          width: 100%;
+          bottom: 22;
+          left: 0;
+        }
+
+        .ft_vid img {
+          display: block;
+          max-width: 100%;
+          border: 0;
+        }
+
+        .ft_vid a:after {
+          content: "\A0\25BA";
+          position: absolute;
+          width: 60px;
+          height: 50px;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          border: 0;
+          border-radius: 10px;
+          color: white;
+          background: rgba(0, 0, 0, .6);
+          font-size: 24px;
+          line-height: 50px;
+          cursor: pointer;
+        }
+
+        .ft_vid a:hover:after {
+          background: #CC181E;
+        }
+
+        .ft_lnk_div {
+          margin: -10px auto 0.5em auto;
+          padding-top: 5px;
+          max-width: 480px;
+          font-family: arial;
+          font-size: 12px;
+          text-align: center;
+          position: relative;
+          color: black;
+          background: whitesmoke;
+        }
+
+        .ft_lnk {
+          /* position:absolute; */
+          top: 100%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          padding: .5em .2em;
+          border: 0;
+          background: whitesmoke;
+        }
+      </style>
+      <!-- END VIDEO -->
+      <div id="synetic-footer" style="font-size: 14pt;">
+        <font rwr="1" size="4" style="font-family:Arial">
+          <div id="tabs">
+            <input type="radio" id="tab-1" name="tab-group-1" checked="">
+            <label for="tab-1">
+              <li><a>Shipping &amp; Handling</a></li>
+            </label>
+            <input type="radio" id="tab-2" name="tab-group-1">
+            <label for="tab-2">
+              <li><a>Payment Method</a></li>
+            </label>
+            <input type="radio" id="tab-3" name="tab-group-1">
+            <label for="tab-3">
+              <li><a>Return Policy</a></li>
+            </label>
+            <input type="radio" id="tab-4" name="tab-group-1">
+            <label for="tab-4">
+              <li><a>Terms &amp; Warranty</a></li>
+            </label>
+            <div class="content content1">
+              <h4 class="tabtitle">Shipping &amp; Handling</h4>
+              <div class="tabcontent">
+                <p style="text-align: center;"> - All orders will ship within 24 working hours (Monday~Friday), and all
+                  orders will be shipped via &nbsp;UPS or USPS.</p>
+                <p> - Payment cleared/received on Sunday will be shipped on the next business days (Monday or Tuesday)
+                </p>
+                <p> - We are not responsible for carrier transit time. This information is provided by the carrier and
+                  excludes weekends and holidays. Note that transit times may vary, particularly during peak periods or
+                  in climate weather conditions, and that delivery times frames will need to be extended for any
+                  processing time frames in excess of 1-2 business days.</p>
+                <p> - We must collect 10.25% sales tax if order shipped within California. By law, sales tax is
+                  automatically computed on products.</p>
+                <p> - Sorry that we do not utilize third party shipping account, and do not offer local pickups.</p>
+                <p> *Shipping and handling fees is not just the cost of the shipment. It is also the additional costs
+                  such as additional packing materials, insurance, and the labor required for shipping, and packing.</p>
+                <p> - Shipping &amp; Handling are not negotiable. </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+              <div class="tabbase"></div>
+            </div>
+            <div class="content content2">
+              <h4 class="tabtitle">Payment Method</h4>
+              <div class="tabcontent">
+                <p> - Payment methods accepted: PayPal</p>
+                <p> - All major credit cards are accepted through our secure payment processor PayPal</p>
+                <p> - We ONLY ship to PayPal account with confirmed address or credit card billing address ONLY.</p>
+                <p> - Please pay for your item within 5 days of the auction end time.</p>
+                <p> - We do not responsible for any custom duty or import tax.</p>
+              </div>
+              <div class="tabbase"></div>
+            </div>
+            <div class="content content3">
+              <h4 class="tabtitle">Return Policy</h4>
+              <div class="tabcontent">
+                <p> - Return Detail--Returns &nbsp;are permitted and must be &nbsp;initiated by the buyer within 30 days
+                  from delivery date. In order to return an item, you must contact us to request an Return Merchandise
+                  Authorization Number (RMA). No return package will be accepted without a valid RMA number. All
+                  non-defective, undamaged products are subject to a 15% restocking fee (except where prohibited by
+                  law). There is no restocking fee for damaged or defective products.</p>
+                &nbsp; &nbsp;
+                <p> - Basic Return Criteria--Your return must include the following or it will be rejected by our
+                  warehouse and returned back to you: Original packaging, Original shipping label / packing slip, All
+                  accessories, Manuals, warranty registration, etc., Unexpired Return Merchandise Authorization (RMA)
+                  number for the correct product. This can be obtained by you from our customer service people. RMA
+                  number &nbsp;should be written on the outside shipping box or on the return label. The RMA number must
+                  not be written on the manufacturer's product box.</p>
+                &nbsp; &nbsp;
+                <p> - Basic Return Processing--If the merchandise is returned on time, in like-new condition, and
+                  conforms with the returns policy, then a replacement order will be prepared and shipped, OR the
+                  purchase price excluding shipping will be refunded to your PayPal account. Please allow up to ten days
+                  from shipment for your return to arrive at our Returns Warehouse because the delivery times vary
+                  depending upon the shipper. Your return will be processed by the Returns Warehouse within 5-7 business
+                  days (excluding weekends and holidays). Risk of loss for product being returned is yours during
+                  shipment between you, our returns center, distributor, or manufacturer, or back to you. Title to the
+                  product being returned remains with you until acceptance by returns center, distributor, or
+                  manufacturer. </p>
+              </div>
+              <div class="tabbase"></div>
+            </div>
+            <div class="content content4">
+              <h4 class="tabtitle">Terms &amp; Warranty</h4>
+              <div class="tabcontent">
+                <p> - We reserve the right to cancel bids from any bidder with a history of negative
+                  feedback/Non-payment.</p>
+                <p> - Negative feedbacks won't help, if you have any question regarding to the item, total amount,
+                  payment options &amp; warranty, please review the item page or email us, and please do include the
+                  item number which you referring to.&nbsp;
+                </p>
+                <div class="tabbase"></div>
+              </div>
+            </div>
+          </div>
+        </font>
+      </div>
+    </font>
+  </font>
+</font>

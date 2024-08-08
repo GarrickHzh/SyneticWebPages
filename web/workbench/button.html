@@ -1,0 +1,77 @@
+<style>
+    .coupon-button {
+        background-color: #ccc;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .coupon-button:hover {
+        background-color: #555;
+    }
+
+    .coupon-button:active {
+        transform: translateY(2px);
+    }
+
+    .coupon-button:hover .copy-message {
+        display: inline-block;
+    }
+
+    .copy-message {
+        display: none;
+        font-size: smaller;
+    }
+
+    .tooltip {
+        position: absolute;
+        /*top: 0;*/
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+</style>
+
+<body>
+    <button class="coupon-button" onclick="copyCoupon()">
+        <span id="tooltipMsg" class="copy-message">Click-to-Copy</span>
+        Coupon
+    </button>
+<!--
+    <div id="tooltip" class="tooltip">
+        Copied!
+    </div>-->
+</body>
+<script>
+    function copyCoupon() {
+        // Copy coupon code to clipboard
+        var couponCode = "COUPONCODE123";
+        navigator.clipboard.writeText(couponCode);
+
+        // Create and display tooltip
+        var tooltip = document.createElement("span");
+        tooltip.innerHTML = "Copied!";
+        tooltip.classList.add("tooltip");
+        document.getElementById("tooltipMsg").appendChild(tooltip);
+
+        // Fade out tooltip after 2 seconds
+        setTimeout(function () {
+            tooltip.style.opacity = "0";
+            setTimeout(function () {
+                tooltip.parentNode.removeChild(tooltip);
+            }, 1000);
+        }, 2000);
+    }
+</script>
